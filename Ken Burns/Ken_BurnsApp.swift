@@ -8,10 +8,13 @@
 import SwiftUI
 
 @main
-struct Ken_BurnsApp: App {
+struct SasquatchesApp: App {
+    @NSApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
+    
     var body: some Scene {
-        WindowGroup {
-            ContentView()
+            WindowGroup {
+                ContentView() // Your main content view
+            }
+            .windowStyle(HiddenTitleBarWindowStyle()) // Optional: hides the title bar
         }
-    }
 }
